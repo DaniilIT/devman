@@ -59,9 +59,9 @@
                     <img class="img-fluid" src="{% static 'img/banner/blog.png' %}" alt="post image">
                   {% endif %}
                   <ul class="thumb-info" style="max-width: 550px;">
-                    <li><a href="#"><i class="ti-user"></i>{{ post.author }}</a></li>
-                    <li><a href="#"><i class="ti-notepad"></i>{{ post.published_at }}</a></li>
-                    <li><a href="#"><i class="ti-themify-favicon"></i>{{ post.comments_amount }} Comment{% if post.comments_amount != 1 %}s{% endif %}</a></li>
+                    <li><a href="{% url 'index' %}"><i class="ti-user"></i>{{ post.author }}</a></li>
+                    <li><a href="{% url 'index' %}"><i class="ti-notepad"></i>{{ post.published_at }}</a></li>
+                    <li><a href="{% url 'index' %}"><i class="ti-themify-favicon"></i>{{ post.comments_amount }} Comment{% if post.comments_amount != 1 %}s{% endif %}</a></li>
                   </ul>
                 </div>
                 <div class="details mt-20">
@@ -77,16 +77,16 @@
                 <nav class="blog-pagination justify-content-center d-flex">
                   <ul class="pagination">
                     <li class="page-item">
-                      <a href="#" class="page-link" aria-label="Previous">
+                      <a href="{% url 'index' %}" class="page-link" aria-label="Previous">
                         <span aria-hidden="true">
                           <i class="ti-angle-left"></i>
                         </span>
                       </a>
                     </li>
-                    <li class="page-item active"><a href="#" class="page-link">1</a></li>
-                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+                    <li class="page-item active"><a href="{% url 'index' %}" class="page-link">1</a></li>
+                    <li class="page-item"><a href="{% url 'index' %}" class="page-link">2</a></li>
                     <li class="page-item">
-                      <a href="#" class="page-link" aria-label="Next">
+                      <a href="{% url 'index' %}" class="page-link" aria-label="Next">
                         <span aria-hidden="true">
                           <i class="ti-angle-right"></i>
                         </span>

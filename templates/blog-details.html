@@ -15,7 +15,7 @@
           <h1>Blog details</h1>
           <nav aria-label="breadcrumb" class="banner-breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
               <li class="breadcrumb-item active" aria-current="page">Blog Details</li>
             </ol>
           </nav>
@@ -51,13 +51,13 @@
               </div>
               <p>{{ post.text }}</p>
               <div class="news_d_footer flex-column flex-sm-row">
-                <a href="#"><span class="align-middle mr-2"><i class="ti-heart" style="color:red;"></i></span>{{ post.likes_amount }} people like this</a>
-                <a class="justify-content-sm-center ml-sm-auto mt-sm-0 mt-2" href="#"><span class="align-middle mr-2"><i class="ti-themify-favicon"></i></span>{{ comments_amount }} Comment{% if comments_amount != 1 %}s{% endif %}</a>
+                <a href="{% url 'index' %}"><span class="align-middle mr-2"><i class="ti-heart" style="color:red;"></i></span>{{ post.likes_amount }} people like this</a>
+                <a class="justify-content-sm-center ml-sm-auto mt-sm-0 mt-2" href="{% url 'index' %}"><span class="align-middle mr-2"><i class="ti-themify-favicon"></i></span>{{ comments_amount }} Comment{% if comments_amount != 1 %}s{% endif %}</a>
                 <div class="news_socail ml-sm-auto mt-sm-0 mt-2">
-                  <a href="#"><i class="fab fa-facebook-f"></i></a>
-                  <a href="#"><i class="fab fa-twitter"></i></a>
-                  <a href="#"><i class="fab fa-dribbble"></i></a>
-                  <a href="#"><i class="fab fa-behance"></i></a>
+                  <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+                  <a href="https://www.dribbble.com/"><i class="fab fa-dribbble"></i></a>
+                  <a href="https://www.behance.com/"><i class="fab fa-behance"></i></a>
                 </div>
               </div>
 
@@ -72,13 +72,13 @@
                   <div class="single-comment justify-content-between d-flex">
                     <div class="user justify-content-between d-flex">
                       <div class="desc">
-                        <h5><a href="#">{{ comment.author }}</a></h5>
+                        <h5><a href="{% url 'index' %}">{{ comment.author }}</a></h5>
                         <p class="date">{{ comment.published_at }}</p>
                         <p class="comment">{{ comment.text }}</p>
                       </div>
                     </div>
                     <div class="reply-btn">
-                      <a href="" class="btn-reply text-uppercase">reply</a> 
+                      <a href="{% url 'index' %}" class="btn-reply text-uppercase">reply</a> 
                     </div>
                   </div>
                 </div>
